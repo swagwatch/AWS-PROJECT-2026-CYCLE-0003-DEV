@@ -1,12 +1,14 @@
 # main.tf
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 
+  # Skip credential validation for OPA policy testing
   skip_credentials_validation = true
   skip_requesting_account_id  = true
   skip_metadata_api_check     = true
 
+  # Use dummy credentials for plan generation
   access_key = "mock_access_key"
   secret_key = "mock_secret_key"
 }

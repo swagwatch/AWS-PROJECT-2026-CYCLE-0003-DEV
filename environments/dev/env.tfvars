@@ -1,16 +1,9 @@
-# env.tfvars
+region = "us-east-1"
 
-#
-# region = "us-east-1"
+environment = "dev"
 
-#
-# environment = "development"
-
-#
-# common_tags = {
-#   environment = "development"
-#   project     = "test-implementation"
-#   owner       = "infrastructure"
-# }
-#--------------------------------------------------------------------------
-
+common_tags = {
+  Environment = "dev"
+  Project     = "cloudwatch-module"
+  Owner       = "infrastructure"
+}
